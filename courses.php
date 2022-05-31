@@ -28,11 +28,11 @@
                 echo
                 '
                  <div class="apna-card" class="card m-3" style="width: 18rem;">
-                        <img src="assets/images/card.jpg" class="card-img-top" alt="...">
+                        <img src="'.$entry['course_image'].'" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">' . $entry['course_name'] . '</h5>
                             <p class="card-text">' . $entry['course_desc'] . '</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="course_detail.php?id='.$entry['course_id'].'" class="btn btn-primary">Go somewhere</a>
                         </div>
                  </div>
                     
