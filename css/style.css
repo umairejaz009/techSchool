@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: rgba(227, 215, 215, 0.976);
+}
+/* -------------------card site-------------- */
+#course_banner{
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    
+}
+.course_cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.apna-card{
+    width: 300px;
+    height: 500px;
+}
+/*--------------- home page starts here----------- */
+.home_img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 640px;
+    width: 100%;
+    position: absolute;
+
+}
+.site-title{
+    /* background-image: linear-gradient(rgba(0,0,0,.5),#35446d), url(../pics/Home-bar.jpg); */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+}
+.site-background{
+    padding-top: 10rem ;
+    text-align: center;
+    
+
+}
+.head_title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:3rem;
+color: white;
+}
+.heading{
+    font-style: italic;
+    font-size: 2.3rem;
+    color: white;
+
+}
+.head_btn{
+    background: transparent;
+    border-radius: 2rem;
+    border: none;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 1rem ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border: 1px solid rgb(50, 44, 44);
+    font-size: larger;
+
+}
+.head_btn:hover{
+    background: transparent;
+    background-color: rgb(50, 44, 44);
+    color: white;
+}
+
+
+
+/*=------------------gallery site ---------------*/
+
+.pic{
+    height: 250px;
+    width:350px;
+    background-color: rgb(157, 140, 173);
+    margin: 1rem;
+    
+    
+    }
+    
+    .gallery{
+          
+        margin-top: 200px;
+    }
+    .section{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .image{
+        height: 250px;
+        width:350px;
+    }
+    
+    .line{
+        height: .5rem;
+        width: 100%;
+        background-color: rgb(196, 235, 235);
+        border-radius: .3rem;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+
+
+    /* -------------register site css ---------------*/
+
+.container1{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-top: 5rem;
+}
+ 
+
+.mysvg1{
+    width: 482px;
+    height: 337px;
+}
+.mysvg2{
+    width: 400px;
+    height:337px;
+}
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.login{
+    flex-direction: column;
+}
+.register_btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 2rem;
+    border: none;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 1rem ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border: 1px solid rgb(50, 44, 44);
+    margin-left: 130px;     
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+.register_btn:hover{
+    background: transparent;
+    background-color: rgba(30, 29, 59, 0.804);
+    color: white;
+}
+.mysvg{
+   padding: 0px ;
+   margin: -16px;
+
+}
+.btn_contnt{
+
+    margin-right: 24px;
+    margin-top: 5px;
+}
+.btn_contnt2{
+
+    margin-right: 24px;
+    margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
