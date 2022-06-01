@@ -34,22 +34,12 @@
                     <div class="c-card-body-content">
                         <h3 class="fontsize">' . $entry['course_name'] . '</h3>
                         <p class="">' . $entry['course_desc'] . '</p>
-                        <a href="course_detail.php?id=' . $entry['course_id'] . '" class="btn btn-md btn-success">Learn More</a>;
+                        <a href="course_detail.php?id=' . $entry['course_id'] . '" class="btn btn-md btn-success">Learn More</a>
                     </div>
                 </div>
             </div>';
-                // echo
-                // '
-                //  <div class="apna-card" class="card m-3" style="width: 18rem;">
-                //         <img src="' . $entry['course_image'] . '" class="card-img-top" alt="...">
-                //         <div class="card-body">
-                //             <h5 class="card-title">' . $entry['course_name'] . '</h5>
-                //             <p class="card-text">' . $entry['course_desc'] . '</p>
-                //             <a href="course_detail.php?id=' . $entry['course_id'] . '" class="btn btn-primary">Go somewhere</a>
-                //         </div>
-                //  </div>
-                    
-                // ';
+               
+               
             }
 
 
