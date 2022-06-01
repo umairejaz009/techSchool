@@ -9,12 +9,12 @@
 <body>
     <?php include "components/_navbar.php" ?>
 
-    <div id="course_banner" class="banner container-fluid py-5 bg-dark text-white">
-        <div class="container">
-
-            <h1 class="py-4">Courses | we have got your future covered</h1>
-        </div>
+    <div class="course_banner p-5 fontsize">
+        <h2>Courses | we have got your future covered</h2>
     </div>
+
+
+
     <div class="container my-5">
         <div class="course_cards">
             <?php
@@ -25,18 +25,31 @@
             $course_fetch = "SELECT * FROM `courses`";
             $course_fetch_run  = mysqli_query($connection, $course_fetch);
             while ($entry = mysqli_fetch_assoc($course_fetch_run)) {
-                echo
-                '
-                 <div class="apna-card" class="card m-3" style="width: 18rem;">
-                        <img src="'.$entry['course_image'].'" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">' . $entry['course_name'] . '</h5>
-                            <p class="card-text">' . $entry['course_desc'] . '</p>
-                            <a href="course_detail.php?id='.$entry['course_id'].'" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                 </div>
+
+                echo '<div class="custom-card">
+                <div class="c-card-head">
+                    <img src="' . $entry['course_image'] . '" alt="">
+                </div>
+                <div class="c-card-body">
+                    <div class="c-card-body-content">
+                        <h3 class="fontsize">' . $entry['course_name'] . '</h3>
+                        <p class="">' . $entry['course_desc'] . '</p>
+                        <a href="course_detail.php?id=' . $entry['course_id'] . '" class="btn btn-md btn-success">Learn More</a>;
+                    </div>
+                </div>
+            </div>';
+                // echo
+                // '
+                //  <div class="apna-card" class="card m-3" style="width: 18rem;">
+                //         <img src="' . $entry['course_image'] . '" class="card-img-top" alt="...">
+                //         <div class="card-body">
+                //             <h5 class="card-title">' . $entry['course_name'] . '</h5>
+                //             <p class="card-text">' . $entry['course_desc'] . '</p>
+                //             <a href="course_detail.php?id=' . $entry['course_id'] . '" class="btn btn-primary">Go somewhere</a>
+                //         </div>
+                //  </div>
                     
-                ';
+                // ';
             }
 
 
@@ -51,7 +64,7 @@
 
     </div>
 
-    <?php include "components/_footer.php" ?>
+    
 </body>
 <?php include "components/_scripts.php" ?>
 
