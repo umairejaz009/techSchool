@@ -26,6 +26,14 @@
         </section>
     </main>
     <div class="container gallery">
+        <div class="container">
+            <div class="gallery-name">
+                 <h1>Our Gallery</h1>
+            </div>
+            <div class="my-3">
+                <hr>
+            </div>
+        </div>
 
         <div class="section">
             <div class="pic"><img class="image" src="assets/images/pic1.jpg" alt="image not loading"></div>
@@ -41,6 +49,14 @@
     </div>
 
     <div class="container container1">
+    <div class="container">
+            <div class="gallery-name">
+                 <h1>Registration</h1>
+            </div>
+            <div class="my-3">
+                <hr>
+            </div>
+        </div>
         <div class=" register">
             <div class="login">
                 <img class="mysvg1" src="assets/svg/svg1.svg" alt="svg not loading">

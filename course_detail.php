@@ -130,8 +130,7 @@ if(isset($_GET['id'])){
 
 
     ?>
-
-
+<?php include"components/_footer.php";  ?>
 
 </body>
 <?php include "components/_scripts.php"; ?>

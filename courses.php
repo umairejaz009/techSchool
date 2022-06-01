@@ -12,7 +12,7 @@
     <div id="course_banner" class="banner container-fluid py-5 bg-dark text-white">
         <div class="container">
 
-            <h1 class="py-4">Courses | we have got your future covered</h1>
+            <h1 class="py-4 course_heading">Courses | we have got your future covered</h1>
         </div>
     </div>
     <div class="container my-5">
@@ -27,12 +27,12 @@
             while ($entry = mysqli_fetch_assoc($course_fetch_run)) {
                 echo
                 '
-                 <div class="apna-card" class="card m-3" style="width: 18rem;">
+                 <div class="card m-3 apna-card" style="width: 18rem;">
                         <img src="'.$entry['course_image'].'" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">' . $entry['course_name'] . '</h5>
                             <p class="card-text">' . $entry['course_desc'] . '</p>
-                            <a href="course_detail.php?id='.$entry['course_id'].'" class="btn btn-primary">Go somewhere</a>
+                            <a href="course_detail.php?id='.$entry['course_id'].'" class="btn btn-primary">More Detail</a>
                         </div>
                  </div>
                     
