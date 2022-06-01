@@ -24,7 +24,8 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          
+          <a class="nav-link disabled">Not Logged In</a>
         </li>
       </ul>
       <div class="d-flex" role="search">
