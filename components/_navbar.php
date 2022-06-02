@@ -1,3 +1,6 @@
+<?php session_start();?>
+
+
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">TechSchool</a>
@@ -29,8 +32,16 @@
         </li>
       </ul>
       <div class="d-flex" role="search">
+        <?php
+          if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']== 'true'){
+            echo '<a href="backend/logout.php" class="btn btn-outline-success px-4 mx-2" >' . $_SESSION['user_email']  .'</a>';
+          }else{
+            echo '<a href="login.php" class="btn btn-outline-success px-4 mx-2" >Join</a>';
+          }
+
+
+        ?>
        
-        <a href="login.php" class="btn btn-outline-success px-4 mx-2" >Join</a>
       </div>
     </div>
   </div>

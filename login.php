@@ -16,19 +16,19 @@
     </div>
     <div class="container my-5 centered">
         <div class="inner-container">
-            <form action="#" class="form">
+            <form action="backend/login_handler.php" class="form" method="POST">
                
                 <div class="my-3">
                     <label for="Email">Email Address</label>
-                    <input type="email" id="Email" class="form-control">
+                    <input type="email" id="Email" class="form-control" name="email">
                 </div>
                 <div class="my-3">
                     <label for="password">Password</label>
-                    <input type="text" id="password" class="form-control">
+                    <input type="password" id="password" class="form-control" name="password">
                 </div>
                 
                 <div class="my-3 centered">
-                   <button class="btn btn-lg px-5 btn-success">Login Now</button>
+                   <button class="btn btn-lg px-5 btn-success" type="submit">Login Now</button>
                 </div>
             </form>
         </div>

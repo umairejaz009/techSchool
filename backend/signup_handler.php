@@ -24,10 +24,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 
 
-                $insert_user = "INSERT INTO `users` ( `user_name`, `user_email`, `user_pass`, `user_roll`, `user_created`) VALUES ( '$name', '$email', '$hashed', '0', 'current_timestamp()');";
+                $insert_user = "INSERT INTO `users` ( `user_name`, `user_email`, `user_password`, `user_role`, `user_created`) VALUES ( '$name', '$email', '$hashed', '0', 'current_timestamp(6).000000'); ;";
                 $insert_user_run = mysqli_query($connection,$insert_user);
 
-                header( "location: index.php?acc=done");
+                header( "location: ../index.php?acc=done");
 
 
 

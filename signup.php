@@ -28,7 +28,7 @@
     </div>
     <div class="container my-5 centered">
         <div class="inner-container">
-            <form action="index.php" class="form" method="POST">
+            <form action="backend/signup_handler.php" class="form" method="POST">
                 <div class="my-3">
                     <label for="FullName">Full Name</label>
                     <input type="text" id="FullName" class="form-control" name="fname">
