@@ -5,5 +5,7 @@
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/alert.css">
     <link rel="shortcut icon" href="../assets/svg/favicon.svg" type="image/x-icon">
+
     

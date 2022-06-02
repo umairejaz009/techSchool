@@ -13,19 +13,21 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
         
         if($password===$password2){
-            echo "<br>Password matched successfully";
+            // echo "<br>Password matched successfully";
             include "dbconfig.php";
             $sql  = "SELECT * FROM `users` WHERE `user_email`='$email' ";
             $sql_run = mysqli_query($connection,$sql);
             $num = mysqli_num_rows($sql_run);
             if($num < 1){
-                echo "user email is unique";
+                // echo "user email is unique";
                 $hashed = password_hash($password,PASSWORD_DEFAULT);
 
 
 
                 $insert_user = "INSERT INTO `users` ( `user_name`, `user_email`, `user_pass`, `user_roll`, `user_created`) VALUES ( '$name', '$email', '$hashed', '0', 'current_timestamp()');";
                 $insert_user_run = mysqli_query($connection,$insert_user);
+
+                header( "location: index.php?acc=done");
 
 
 
@@ -46,7 +48,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
 
 }
-echo "This is signup handler";
 
 
 ?>
