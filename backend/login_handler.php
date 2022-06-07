@@ -23,9 +23,17 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                    echo "password matched<br>";
                    session_start();
                    $_SESSION['loggedin'] = true;
+
                    $_SESSION['user_name']  =  $row['user_name'];
+                   $_SESSION['user_id']  =  $row['user_id'];
                    $_SESSION['user_email']  =  $row['user_email'];
                    header("location:../index.php?acc=done");
+                echo $_SESSION['user_name'];
+                echo "<br>"; 
+                echo $_SESSION['user_id'];
+                echo "<br>";
+                 echo $_SESSION['user_email'];
+                echo "<br>"; 
 
                }else{
                    echo "password does not matched<br>";
@@ -41,5 +49,3 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         }
     }
 }
-
-?>

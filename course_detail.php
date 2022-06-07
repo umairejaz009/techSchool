@@ -24,6 +24,12 @@ if(isset($_GET['id'])){
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div></div>';
     }
+    if(isset($_GET['login']) && $_GET['login']=='true'){
+        echo '<div class="container m-4"><div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success! </strong> You have been Enrolled successfully <a href="dashboard.php" class="btn btn-warning btn-md mx-5">Dashboard</a>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div></div>';
+    }
     $course_id = $_GET['id'];
     // echo $course_id;
     $course_sql = "SELECT * FROM `courses` WHERE `course_id`=$course_id";
