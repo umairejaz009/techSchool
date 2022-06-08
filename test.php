@@ -1,43 +1,14 @@
-<?php
-if(isset($_GET['id'])){
-    include "backend/dbconfig.php";
-
-}else{
-    header('location:index.php?id=notFound');
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <?php include "components/_links.php"; ?>
-    <title>Course Details page</title>
+<?php include "components/_links.php";?>
+<?php include "components/_scripts.php";?>
+
+    <title>Document</title>
 </head>
-
 <body>
-    <?php include "components/_navbar.php"; ?>
     
-    <?php
-    if(isset($_GET['login']) && $_GET['login']=='false'){
-        echo '<div class="container m-4"><div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Error! </strong> Please login to continue <a href="login.php" class="btn btn-success btn-md mx-5">Login</a>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div></div>';
-    }
-    if(isset($_GET['login']) && $_GET['login']=='true'){
-        echo '<div class="container m-4"><div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success! </strong> You have been Enrolled successfully <a href="dashboard.php" class="btn btn-warning btn-md mx-5">Dashboard</a>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div></div>';
-    }
-    $course_id = $_GET['id'];
-    // echo $course_id;
-    $course_sql = "SELECT * FROM `courses` WHERE `course_id`=$course_id";
-    $course_sql_run = mysqli_query($connection,$course_sql);
-    while($row = mysqli_fetch_assoc($course_sql_run)){
-
-        echo '
-        <div class="container">
+    <div class="container">
         <section class="text-gray-600 body-font overflow-hidden">
             <div class="container px-5 py-24 mx-auto">
                 <div class="lg:w-4/5 mx-auto flex flex-wrap">
@@ -85,30 +56,7 @@ if(isset($_GET['id'])){
                         <p class="leading-relaxed">
                         '.$row['course_desc'].'
                         </p>
-                        <!-- <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                            <div class="flex">
-                                <span class="mr-3">Color</span>
-                                <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                                <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                                <button class="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
-                            </div>
-                            <div class="flex ml-6 items-center">
-                                <span class="mr-3">Size</span>
-                                <div class="relative">
-                                    <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
-                                        <option>SM</option>
-                                        <option>M</option>
-                                        <option>L</option>
-                                        <option>XL</option>
-                                    </select>
-                                    <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
-                                            <path d="M6 9l6 6 6-6"></path>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div> -->
+                       
                         <div class="my-4">
                             <hr>
                         </div>
@@ -118,7 +66,7 @@ if(isset($_GET['id'])){
                             <div class="flex">
                             <form action="backend/enroll_course.php" method="POST">
                             <input name="id" type="hidden" value="'.$row['course_id'].'">
-                            <button class=" text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"  type="submit" >Enroll Now</button>
+                            <button class=" text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded    "      type="submit" >Enroll Now</button>
 
                             </form>
                             </div>
@@ -142,20 +90,8 @@ if(isset($_GET['id'])){
 
     </div>
         
-        ';
+       
 
-
-
-        
-    }
-    
-
-
-
-    ?>
-<?php include"components/_footer.php";  ?>
 
 </body>
-<?php include "components/_scripts.php"; ?>
-
 </html>

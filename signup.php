@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,25 +28,25 @@
     </div>
     <div class="container my-5 centered">
         <div class="inner-container">
-            <form action="#" class="form">
+            <form action="backend/signup_handler.php" class="form" method="POST">
                 <div class="my-3">
                     <label for="FullName">Full Name</label>
-                    <input type="text" id="FullName" class="form-control">
+                    <input type="text" id="FullName" class="form-control" name="fname">
                 </div>
                 <div class="my-3">
                     <label for="Email">Email Address</label>
-                    <input type="email" id="Email" class="form-control">
+                    <input type="email" id="Email" class="form-control" name="email">
                 </div>
                 <div class="my-3">
                     <label for="password">Password</label>
-                    <input type="text" id="password" class="form-control">
+                    <input type="password" id="password" class="form-control" name="password">
                 </div>
                 <div class="my-3">
                     <label for="cpassword">Confirm Password</label>
-                    <input type="text" id="cpassword" class="form-control">
+                    <input type="password" id="cpassword" class="form-control" name="password2">
                 </div>
                 <div class="my-3 centered">
-                   <button class="btn btn-lg px-5 btn-success">Signup Now</button>
+                   <button class="btn btn-lg px-5 btn-success" type="submit">Signup Now</button>
                 </div>
             </form>
         </div>
@@ -44,3 +56,8 @@
 </body>
 
 </html>
+
+
+
+
+<!-- INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_pass`, `user_roll`, `user_created`) VALUES (NULL, 'Noman Iqbal', 'noman@mail.com', 'noman555', '0', 'current_timestamp()'); -->

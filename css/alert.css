@@ -1,0 +1,8 @@
+#alertx{
+
+    width: 400px;
+    position: fixed;
+    transition: all .2s ease-out;
+    background-color: #fff;
+   
+}
